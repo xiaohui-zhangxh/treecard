@@ -16,5 +16,6 @@ class TreeCard::Attribute
       @params[param.name.downcase] = param
     end
     @value = value
+    @value.strip! if @value.respond_to?(:strip)
   end
 end
